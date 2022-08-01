@@ -2,14 +2,26 @@ const fs = require("fs");
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if(!license) {
+  if(!license || license == "NO LICENSE") {
     return "";
-  } else {(license = "GNUAGPLv3")
+  } else if (license = "Mozilla") {
   return `
-  [![License: Hippocratic 3.0](https://img.shields.io/badge/License-Hippocratic_3.0-lightgrey.svg)]
+  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
   `;
-}
-}
+} else if (license = "Apache") {
+  return `
+  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  `
+} else if (license = "MIT") {
+return `
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+`
+}else if (license = "The Unlicense") {
+  return `
+  [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+`
+};
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -32,11 +44,13 @@ function renderLicenseSection(license) {
 // REMEMBER - Markdown is the SYNTAX of README
 function generateMarkdown(data) {
   return `# ${data.name} ${renderLicenseBadge(data.license)}
-  Table of Contents
+
+Table of Contents
 Description
 Installation
 Usage
 Test
+
 ${renderLicenseLink(data.license)}
 
   Description: ${data.description}
@@ -52,10 +66,11 @@ ${renderLicenseLink(data.license)}
   Questions: 
   Please find a link to my GitHub profile here: github.com/${data.username}
 
-  
+
   With any questions, please contact me at ${data.email}
 
 `;
+
 }
 
 module.exports = generateMarkdown;
