@@ -1,31 +1,30 @@
-# zach 
-  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-  
+# z 
+  [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+
 
 Table of Contents
 Description
 Installation
 Usage
 Test
+License
 
-undefined
-
-  Description: za
+  Description: z
 
   Installation: z
 
-  Usage: dagdsa
+  Usage: z
 
-  Test: g
+  Test: z
 
-  
+
     LICENSE
     =============================
      
 
   Questions: 
-  Please find a link to my GitHub profile here: github.com/f
+  Please find a link to my GitHub profile here: github.com/z
 
 
-  With any questions, please contact me at d
+  With any questions, please contact me at z
 
